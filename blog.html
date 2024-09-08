@@ -1,0 +1,493 @@
+<!--  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Your Business Needs a Website: The Ultimate Digital Business Card</title>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    :root {
+      --background: #004643;
+      --background-light: rgba(0, 70, 67, 0.44);
+      --headline: #FFFFFF;
+      --paragraph: #404040;
+      --theme: #F9BC60;
+      --button-text: #001E1D;
+      --stroke: #001E1D;
+      --main: #E8E4E6;
+      --highlight: #FFD401;
+      --highlight--theme: #57EEB280;
+      --secondary: #ABD1C6;
+      --secondary-light: rgba(171, 209, 198, 0.14);
+      --tertiary: #E16152;
+    }
+
+    body {
+      background-color: var(--headline);
+      color: var(--paragraph);
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--background);
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: var(--theme);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .cta-button {
+      background-color: var(--theme);
+      color: var(--button-text);
+      padding: 10px 20px;
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: var(--highlight);
+    }
+
+    .container {
+      padding: 20px 0;
+      border-radius: 10px;
+      max-width: 100%;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    nav {
+      text-transform: uppercase;
+      height: var(--nav-height);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      color: #ffffff;
+      background: var(--background);
+      padding-block: 10px;
+    }
+
+    nav.hidden {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav.visible {
+      transform: translateY(0);
+    }
+
+    /* added class swith JS */
+    .window-scroll {
+      background-color: var(--stroke);
+      box-shadow: var(--box-shadow);
+    }
+
+    .nav__container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* LOGO STARTS HERE */
+    .logo {
+      z-index: 98;
+      color: white;
+    }
+
+    .logo img {
+      width: 2.6rem;
+    }
+
+    .nav__navigation ul {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .nav__navigation ul li a {
+      font-weight: 700;
+      width: 100%;
+      height: 100%;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    .nav__navigation ul li a:hover::after {
+      height: .2rem;
+      background-color: var(--theme);
+      bottom: -25%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: fillbar 400ms ease forwards;
+      border-radius: 5px;
+    }
+
+    @keyframes fillbar {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 2.5rem;
+      }
+    }
+
+    .nav__navigation ul li a:hover {
+      color: var(--theme);
+    }
+
+    .li-none-desk {
+      display: none;
+    }
+
+    /* hiding menu button for desktop */
+    .menuBtn {
+      margin-right: .6rem;
+      display: none;
+    }
+
+    /* writter */
+    .writter {
+      width: 50%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid var(--background);
+      box-shadow: 4px 4px var(--background );
+      border-radius: 5px;
+      margin: 0 auto;
+      transition: all 400ms ease;
+    }
+    .writter:hover {
+      box-shadow: none;
+    }
+    .writter img {
+      width: 60px;
+      border-radius: 50%;
+    }
+    .writter h4{
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0 0 0rem 0;
+    } .writter p{
+      font-size: .85rem;
+      margin: 0;
+      color: gray;
+      
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--secondary);
+    }
+
+    /* Media Query for Mobile Devices */
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+
+      /* sm-NAVIGATION STARTS HERE */
+      .nav-container {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      section.animate-section {
+        min-height: 10vh;
+      }
+
+      .animate-text span {
+        font-size: 2rem;
+      }
+
+      .nav__navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--stroke);
+        transition: var(--transition);
+      }
+
+      /* added class with JavaScript */
+      .active {
+        right: 0;
+        transition: var(--transition);
+      }
+
+      .nav__navigation {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav__navigation ul {
+        margin: auto 0;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+      }
+
+      .nav__navigation ul li {
+        width: 100%;
+        height: 100%;
+        transition: var(--transition);
+      }
+
+      .nav__navigation ul li a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--theme);
+        font-size: 1.3rem;
+      }
+
+      .nav__navigation ul li a:hover::after {
+        display: none;
+      }
+
+      .nav__navigation ul li a:hover {
+        color: var(--headline);
+      }
+
+      .nav__navigation ul li:active {
+        color: var(--headline);
+        background: var(--secondary-light);
+      }
+
+      .li-none-desk {
+        display: block;
+      }
+
+      /* NAVIGATION BUTTON STARTS HERE */
+      .menuBtn {
+        width: 2.2rem;
+        height: 2rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .menuBtn span {
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        background: var(--highlight);
+        border-radius: 4px;
+        transition: bottom 0.35s cubic-bezier(.5, -0.35, .35, 1.5), transform 0.35s cubic-bezier(.5, -0.35, .35, 1.5), opacity 0.35s cubic-bezier(.5, -0.35, .35, 1.5);
+      }
+
+      /* Positioning the bars with equal spacing */
+      .menuBtn span:nth-child(1) {
+        top: 0.3rem;
+      }
+
+      .menuBtn span:nth-child(2) {
+        top: 0.9rem;
+      }
+
+      .menuBtn span:nth-child(3) {
+        top: 1.5rem;
+      }
+
+      .menu-active span:nth-child(1) {
+        transform: rotate(-135deg);
+        top: 0.9rem;
+      }
+
+      .menu-active span:nth-child(2) {
+        opacity: 0;
+        transform: rotate(-135deg);
+      }
+
+      .menu-active span:nth-child(3) {
+        transform: rotate(-225deg);
+        top: 0.9rem;
+      }
+
+      @keyframes hide {
+        to {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+
+      @keyframes show {
+        from {
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <br><br>
+  <!-- NAVIGATION SECTION STARTS HERE -->
+  <nav class="visible">
+    <div class="nav-container nav__container">
+      <!-- website logo -->
+      <div class="logo">
+        <img src="/images/logo.png" alt="og dev - web Development Services">
+      </div>
+      <!-- Navigation -->
+      <div class="nav__navigation">
+        <ul>
+          <li><a alt="navigation" href="#Home"><span class="highlight--theme">Home</span></a></li>
+          <li><a alt="navigation" href="#About">About</a></li>
+          <li><a alt="navigation" href="#Contact">Contact</a></li>
+          <li><a alt="navigation" href="#Projects">Projects</a></li>
+          <li><a alt="navigation" href="#Testimonials">Testimonials</a></li>
+          <hr class="li-none-desk" style="border: 1px solid black; width: 80%;">
+          <div class="logo li-none-desk">
+            <img src="/images/logo.png" alt="ogdev Website Logo">
+          </div>
+          <p class="li-none-desk" style="font-weight: 600;">ogdev</p><br>
+        </ul>
+      </div>
+      <!-- Menu Toggle Button -->
+      <div class="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="">
+    <h1>Why Your Business Needs a Website: The Ultimate Digital Business Card</h1>
+    <p>In today's digital age, a website is more than just an online brochure; it's your business's digital storefront. Whether you're a small business owner, freelancer, or personal brand, having a well-designed and optimized website is essential for success. Here's why:</p>
+
+    <h2>Credibility and Professionalism</h2>
+    <img src="https://source.unsplash.com/3tYZjGSBwbk" alt="https://unsplash.com/photos/two-women-talking-while-looking-at-laptop-computer-7okkFhxrxNw">
+    <p>A website gives your business a professional and credible online presence. It shows that you are serious about your brand and committed to providing valuable information to your audience. In fact, studies show that 75% of consumers judge a company's credibility based on its website design.</p>
+
+    <h2>Visibility and Reach</h2>
+    <p>A website is a powerful tool for increasing your visibility online. By optimizing your website for search engines (SEO), you can attract organic traffic from potential customers searching for your products or services. Incorporating keywords like "responsive web design" and "SEO-optimized content" can help you rank higher.</p>
+
+    <h2>Customer Engagement</h2>
+    <p>Your website is a platform for engaging with your customers. You can provide valuable content, answer their questions, and build relationships through blogs, newsletters, and interactive features.</p>
+
+    <h2>24/7 Accessibility</h2>
+    <p>Unlike a physical storefront, your website is open 24/7. This means that customers can access your information and make purchases at any time, from anywhere in the world, giving your business a significant advantage.</p>
+
+    <h2>Brand Building</h2>
+    <p>Your website is an extension of your brand. It allows you to showcase your values, mission, and unique selling points. Consistent branding across your site can help build trust and loyalty with your audience.</p>
+
+    <h2>Sales and Conversions</h2>
+    <p>A well-designed website can drive sales and conversions. Whether you're selling products or services, a clear and compelling website with a strong call-to-action can encourage visitors to take action.</p>
+
+    <h2>Data and Analytics</h2>
+    <p>A website provides valuable data and analytics that can help you track your performance and make informed decisions. You can see who is visiting your site, what pages they are viewing, and how long they are staying.</p>
+
+    <h2>Cost-Effective Marketing</h2>
+    <p>Compared to traditional marketing methods, building and maintaining a website can be a cost-effective way to reach your target audience. It's a one-time investment that continuously works for you.</p>
+
+    <h3>To Optimize Your Website for Search Engines, Consider the Following:</h3>
+    <ul>
+      <li><strong>Keyword Research:</strong> Identify relevant keywords and use them naturally throughout your content.</li>
+      <li><strong>Internal Linking:</strong> Link to other relevant pages on your website to improve user navigation and search engine indexing.</li>
+      <li><strong>External Backlinks:</strong> Build high-quality backlinks from reputable websites in your niche.</li>
+      <li><strong>Social Media Promotion:</strong> Share your website on social media platforms to increase visibility.</li>
+      <li><strong>User Experience:</strong> Ensure your website is mobile-friendly, easy to navigate, and loads quickly.</li>
+      <li><strong>Content Quality:</strong> Create high-quality, informative, and engaging content that addresses your target audience's needs.</li>
+    </ul>
+
+    <p>By investing in a well-designed and optimized website, you can increase your visibility, engage with your customers, and drive sales.</p>
+
+    <a href="#" class="cta-button">Ready to establish your digital presence? Contact us today!</a>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="writter">
+      <img src="images/vivek.jpg" alt="Vivek Lohar Web developer">
+      <h4>Vivek Lohar</h4>
+      <p>Founder ogdev</p>
+    </div>
+  </div>
+  <div class="footer">
+    <p>&copy; 2024 ogdev. All rights reserved.</p>
+  </div>
+
+  <!-- Javascript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
