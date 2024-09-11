@@ -69,7 +69,7 @@ body {
       rgba(22, 22, 22, 0.7),
       rgba(22, 22, 22, 0.7)
     ),
-    url("/assets/images/body-big.jpg");
+    url("/ogdev/assets/images/body-big.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -86,7 +86,7 @@ body {
         rgba(22, 22, 22, 0.7),
         rgba(22, 22, 22, 0.7)
       ),
-      url("asssets/images/body-small.jpg");
+      url("/ogdev/asssets/images/body-small.jpg");
   }
 }
 
@@ -195,7 +195,7 @@ section {
 }
 
 .container {
-  width: var(--container-w);
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -425,6 +425,34 @@ nav.visible {
 section.hero {
   height: 60vh;
 }
+@media screen and (min-width: 900px) {
+  
+  section.hero {    
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-img {
+  width: 50%;
+}
+.hero-img::after {
+  width: 110%;
+  transform: translateX(-5%) translateY(-5px);
+}
+  .container--plan {
+width: 80%;
+  }
+  .plan-card {
+    width: auto;
+    height: 614px;
+    margin-top: 15px;
+    ]
+    .carousel-card {
+      height: 365px;
+      width: 100%;
+    }
+}
 
 .hero-img {
   position: relative;
@@ -480,7 +508,12 @@ section.hero {
   font-size: 14px;
   color: var(--paragraph);
 }
-
+  
+  
+}
+@media screen and (min-width: 900px) {
+  
+}
 /* SERVICES SECTION STARTS HERE */
 .services-card {
   font-family: "Poppins", sans-serif;
