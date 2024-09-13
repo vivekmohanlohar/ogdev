@@ -425,35 +425,6 @@ nav.visible {
 section.hero {
   height: 60vh;
 }
-@media screen and (min-width: 900px) {
-  
-  section.hero {    
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.hero-img {
-  width: 50%;
-}
-.hero-img::after {
-  width: 110%;
-  transform: translateX(-5%) translateY(-5px);
-}
-  .container--plan {
-width: 80%;
-  }
-  .plan-card {
-    width: auto;
-    height: 614px;
-    margin-top: 15px;
-    ]
-    .carousel-card {
-      height: 365px;
-      width: 100%;
-    }
-}
-
 .hero-img {
   position: relative;
   border: 5px solid silver;
@@ -509,8 +480,6 @@ width: 80%;
   color: var(--paragraph);
 }
   
-
-
 /* SERVICES SECTION STARTS HERE */
 .services-card {
   font-family: "Poppins", sans-serif;
