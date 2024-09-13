@@ -86,7 +86,7 @@ body {
         rgba(22, 22, 22, 0.7),
         rgba(22, 22, 22, 0.7)
       ),
-      url("/ogdev/asssets/images/body-small.jpg");
+      url("/ogdev/assets/images/body-small.jpg");
   }
 }
 
@@ -509,11 +509,8 @@ width: 80%;
   color: var(--paragraph);
 }
   
-  
-}
-@media screen and (min-width: 900px) {
-  
-}
+
+
 /* SERVICES SECTION STARTS HERE */
 .services-card {
   font-family: "Poppins", sans-serif;
