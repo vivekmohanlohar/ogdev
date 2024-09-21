@@ -479,7 +479,7 @@ section.hero {
   font-size: 14px;
   color: var(--paragraph);
 }
-  
+
 /* SERVICES SECTION STARTS HERE */
 .services-card {
   font-family: "Poppins", sans-serif;
@@ -754,8 +754,8 @@ td {
   background: #ffffff;
   width: 18rem;
   border-radius: 10px;
-  border-bottom: 8px solid rebeccapurple;
-  border-top: 8px solid rebeccapurple;
+  border-bottom: 8px solid var(--highlight);
+  border-top: 8px solid var(--highlight);
   border-inline: 1px solid rebeccapurple;
   box-shadow: 0 6px 30px rgba(207, 212, 222, 0.3);
   font-family: "Poppins", sans-serif;
@@ -780,10 +780,10 @@ td {
 
 .plan-card h2 span {
   display: block;
-  color: #4d4d4d;
-  font-size: 12px;
+  color: #969696;
+  font-size: 14px;
   font-weight: 400;
-  margin: 0 0 0 0;
+  margin: 4px 0 0 0;
 }
 
 .plan-card .plan-price {
@@ -807,6 +807,8 @@ td {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  line-height: 1.3;
+  margin: 0 0 8px 0;
 }
 
 .benefits-list ul li.not-included {
